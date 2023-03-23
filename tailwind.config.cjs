@@ -5,7 +5,12 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      gridTemplateColumns: {
+        1: 'repeat(auto-fit, minmax(200px, 1fr))',
+        2: '1fr 4fr'
+      }
+    }
   },
   plugins: []
 }
