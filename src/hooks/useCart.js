@@ -15,6 +15,5 @@ export function useCart () {
       ...prevState, { ...product, quantity: 1 }
     ]))
   }
-  console.log(cart)
   return { cart, setCart, addToCart }
 }
