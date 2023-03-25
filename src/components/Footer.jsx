@@ -1,7 +1,7 @@
-export const Footer = ({ cart }) => {
+export const Footer = ({ children }) => {
   return (
     <footer>
-      CART : {cart}
+      CART : {children}
     </footer>
   )
 }
