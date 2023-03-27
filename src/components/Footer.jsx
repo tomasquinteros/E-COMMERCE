@@ -1,7 +1,8 @@
-export const Footer = ({ children }) => {
+
+export const Footer = ({ cart }) => {
   return (
     <footer>
-      CART : {children}
+      E-COMMERCE REALIZADO POR QUINTEROS TOMAS
     </footer>
   )
 }

@@ -15,5 +15,10 @@ export function useCart () {
       ...prevState, { ...product, quantity: 1 }
     ]))
   }
-  return { cart, setCart, addToCart }
+  const removeFromCart = product => {
+    const newCart = cart.filter(item => item.is !== product.id)
+    return setCart(newCart)
+  }
+
+  return { cart, setCart, addToCart, removeFromCart }
 }
