@@ -5,13 +5,13 @@ import { Footer } from './components/Footer'
 import { useState } from 'react'
 import { products as initialState } from './mocks/product.json'
 import { useFilters } from './hooks/useFilters'
-import { useCart } from './hooks/useCart'
+import { Cart } from './components/Cart'
 
 function App () {
   const [products] = useState(initialState)
   const { filterProduct, filters, setFilters } = useFilters()
   const filteredProduct = filterProduct(products)
-  const { cart } = useCart()
+
   return (
     <div className='flex flex-col gap-20 items-center justify-center'>
       <Header />
@@ -19,7 +19,8 @@ function App () {
         <Filters setFilters={setFilters} filters={filters} />
         <Products products={filteredProduct} />
       </div>
-      <Footer> {cart} </Footer>
+      <Cart />
+      <Footer />
     </div>
   )
 }
