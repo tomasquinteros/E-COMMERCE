@@ -1,26 +1,16 @@
 import { useCart } from '../hooks/useCart'
-
-function CartItem ({ products }) {
-  return (
-    products.map(product => (
-      <li key={product.id}>
-        <img src={product.thumbnail} alt={product.title} />
-        <div>
-          <h2>{product.title}</h2>
-          <span>{product.quantity} - {product.price}</span>
-        </div>
-      </li>
-    )
-    )
-  )
-}
+import { ClearCartIcon } from './Icons'
+import { CartList } from './CartList'
 export function Cart () {
-  const { cart } = useCart()
+  const { cart, addToCart, removeFromCart, clearCart } = useCart()
   return (
     <aside>
       <ul>
-        <CartItem products={cart} />
+        <CartList products={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
       </ul>
+      <button onClick={() => clearCart()}>
+        <ClearCartIcon />
+      </button>
     </aside>
   )
 }
