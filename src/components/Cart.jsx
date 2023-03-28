@@ -1,25 +1,25 @@
 import { useCart } from '../hooks/useCart'
 
-function CartItem (product) {
-  const { title, thumbnail, price, quantity } = product
+function CartItem ({ products }) {
   return (
-    <li>
-      <img src={thumbnail} alt={title} />
-      <h1>{title}</h1>
-      <p>Quantity: {quantity}</p>
-      <span>${price}</span>
-    </li>
+    products.map(product => (
+      <li key={product.id}>
+        <img src={product.thumbnail} alt={product.title} />
+        <div>
+          <h2>{product.title}</h2>
+          <span>{product.quantity} - {product.price}</span>
+        </div>
+      </li>
+    )
+    )
   )
 }
-
 export function Cart () {
   const { cart } = useCart()
   return (
     <aside>
       <ul>
-        {
-          cart.map(product => (<CartItem key={product} product={product} />))
-        }
+        <CartItem products={cart} />
       </ul>
     </aside>
   )
