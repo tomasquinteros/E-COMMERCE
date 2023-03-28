@@ -8,14 +8,15 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = product => {
     const productInIndex = cart.findIndex(item => item.id === product.id)
-    if (productInIndex >= 1) {
+    if (productInIndex >= 0) {
       const newCart = structuredClone(cart)
       newCart[productInIndex].quantity += 1
+      newCart[productInIndex].total += product.price
       return setCart(newCart)
     }
     const newCart = prevState => ([
       ...prevState,
-      { ...product, quantity: 1 }
+      { ...product, quantity: 1, total: product.price }
     ])
     return setCart(newCart)
   }
