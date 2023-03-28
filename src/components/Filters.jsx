@@ -1,8 +1,5 @@
-/* import { useFilters } from '../hooks/useFilters'
-import { useId } from 'react' // Lo usamos para que siempre nuestra referencia sea exacta */
-
 import { useId } from 'react'
-const categories = ['all', 'laptops', 'smartphones', 'groceries']
+const categories = ['all', 'laptops', 'smartphones', 'groceries', 'home-decoration', 'fragrances', 'skincare']
 
 export function Filters ({ filters, setFilters }) {
   const minPriceID = useId()
@@ -30,18 +27,21 @@ export function Filters ({ filters, setFilters }) {
         <input type='range' value={filters.minPrice} min='0' max='1000' onChange={handleChangePrice} />
       </div>
       <div>
-        <fieldset>
+        <fieldset className='flex flex-col gap-4'>
           <label htmlFor={categoryID}>
             CATEGORY: {filters.category}
           </label>
-          {
-            categories.map(category => (
-              <div key={category}>
-                <span>{category}</span>
-                <input type='radio' name='category' id='category' value={category} onChange={handleChangeCategory} />
-              </div>
-            ))
-          }
+          <div>
+
+            {
+              categories.map(category => (
+                <div key={category} className='flex justify-between'>
+                  <span>{category}</span>
+                  <input type='radio' name='category' id='category' value={category} onChange={handleChangeCategory} className='w-5' />
+                </div>
+              ))
+            }
+          </div>
         </fieldset>
       </div>
     </div>
