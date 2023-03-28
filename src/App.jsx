@@ -1,11 +1,14 @@
+import { useState } from 'react'
+import { useFilters } from './hooks/useFilters'
+import { products as initialState } from './mocks/product.json'
+import { FavoritesProvider } from './context/favorites'
+
 import { Products } from './components/Products'
 import { Header } from './components/Header'
 import { Filters } from './components/Filters'
-import { Footer } from './components/Footer'
-import { useState } from 'react'
-import { products as initialState } from './mocks/product.json'
-import { useFilters } from './hooks/useFilters'
 import { Cart } from './components/Cart'
+import { Favorites } from './components/Favorites'
+import { Footer } from './components/Footer'
 
 function App () {
   const [products] = useState(initialState)
@@ -13,15 +16,18 @@ function App () {
   const filteredProduct = filterProduct(products)
 
   return (
-    <div className='flex flex-col gap-20 items-center justify-center'>
-      <Header />
-      <div className='grid grid-cols-2 w-full'>
-        <Filters setFilters={setFilters} filters={filters} />
-        <Products products={filteredProduct} />
+    <FavoritesProvider>
+      <div className='flex flex-col gap-20 items-center justify-center'>
+        <Header />
+        <div className='grid grid-cols-2 w-full gap-10 max-w-7xl'>
+          <Filters setFilters={setFilters} filters={filters} />
+          <Products products={filteredProduct} />
+        </div>
+        <Cart />
+        <Favorites />
+        <Footer />
       </div>
-      <Cart />
-      <Footer />
-    </div>
+    </FavoritesProvider>
   )
 }
 
