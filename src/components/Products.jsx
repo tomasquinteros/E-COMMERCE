@@ -7,11 +7,11 @@ export const Products = ({ products }) => {
   const { addToCart, cart, removeFromCart } = useCart()
   const { favorites, removeFromFavorites, addToFavorites } = useFavorites()
   return (
-    <section className='max-w-4xl'>
+    <section className='w-full max-w-5xl'>
       <ul className='grid grid-cols-1 gap-3'>
         {
           products.length
-            ? products.slice(0, 10).map(product => {
+            ? products.map(product => {
               const itemInCart = checkProductInCart(product, cart)
               const itemInFav = checkProductInFavorites(product, favorites)
               return (
