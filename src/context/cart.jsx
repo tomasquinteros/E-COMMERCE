@@ -41,10 +41,18 @@ export const CartProvider = ({ children }) => {
   const clearCart = () => {
     return setCart([])
   }
-
+  function totalPriceFunction () {
+    let operation = 0
+    cart.map(product => {
+      operation += product.total
+      return operation
+    })
+    return operation
+  }
+  const totalPrice = totalPriceFunction()
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, clearCart, removeFromCart, decrementCart }}
+      value={{ cart, addToCart, clearCart, removeFromCart, decrementCart, totalPrice }}
     >
       {children}
     </CartContext.Provider>
