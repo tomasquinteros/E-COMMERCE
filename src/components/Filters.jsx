@@ -24,36 +24,38 @@ export function Filters ({ filters, setFilters }) {
   }
 
   return (
-    <div>
-      <div>
-        <ul className='flex gap-4'>
-          <li>
-            <label htmlFor={minPriceID}>
-              Min Price:
-            </label>
-            <input className='bg-slate-900 w-16 text-center' type='text' value={filters.minPrice} min='0' onChange={handleChangeMinPrice} />
-          </li>
-          <li>
-            <label htmlFor={maxPriceID}>
-              Max Price:
-            </label>
-            <input className='bg-slate-900 w-16 text-center' type='text' value={filters.maxPrice} min={filters.minPrice} onChange={handleChangeMaxPrice} />
-          </li>
-        </ul>
-      </div>
-      <div>
-        <fieldset className='flex gap-4'>
-          <div className='flex gap-6'>
-            {
-              categories.map(category => (
-                <div key={category} className='flex justify-between gap-2'>
-                  <span>{category}</span>
-                  <input type='radio' name='category' id='category' value={category} onChange={handleChangeCategory} className='w-5' />
-                </div>
-              ))
-            }
-          </div>
-        </fieldset>
+    <div className='bg-slate-500 py-1 px-2 rounded-xl'>
+      <div className='flex gap-16 bg-orange-400 p-1 rounded-xl'>
+        <div>
+          <ul className='flex gap-2'>
+            <li className='flex gap-1'>
+              <label htmlFor={minPriceID}>
+                Min Price:
+              </label>
+              <input className='w-16 text-center rounded-xl' type='text' value={filters.minPrice} min='0' onChange={handleChangeMinPrice} />
+            </li>
+            <li className='flex gap-1'>
+              <label htmlFor={maxPriceID}>
+                Max Price:
+              </label>
+              <input className='w-16 text-center rounded-xl' type='text' value={filters.maxPrice} min={filters.minPrice} onChange={handleChangeMaxPrice} />
+            </li>
+          </ul>
+        </div>
+        <div>
+          <fieldset className='flex gap-2'>
+            <div className='flex gap-3'>
+              {
+                categories.map(category => (
+                  <div key={category} className='flex justify-between gap-2'>
+                    <span>{category.toUpperCase()}</span>
+                    <input type='radio' name='category' id='category' value={category} onChange={handleChangeCategory} className='w-5' />
+                  </div>
+                ))
+              }
+            </div>
+          </fieldset>
+        </div>
       </div>
     </div>
   )
