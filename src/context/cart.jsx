@@ -20,7 +20,19 @@ export const CartProvider = ({ children }) => {
     ])
     return setCart(newCart)
   }
-
+  const decrementCart = product => {
+    const productInIndex = cart.findIndex(item => item.id === product.id)
+    if (productInIndex >= 0) {
+      const newCart = structuredClone(cart)
+      if (newCart[productInIndex].quantity <= 1) {
+        const newCart = cart.filter(item => item.id !== product.id)
+        return setCart(newCart)
+      }
+      newCart[productInIndex].quantity -= 1
+      newCart[productInIndex].total -= product.price
+      return setCart(newCart)
+    }
+  }
   const removeFromCart = product => {
     const newCart = cart.filter(item => item.id !== product.id)
     return setCart(newCart)
@@ -32,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, clearCart, removeFromCart }}
+      value={{ cart, addToCart, clearCart, removeFromCart, decrementCart }}
     >
       {children}
     </CartContext.Provider>
