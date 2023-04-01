@@ -4,10 +4,10 @@ import { useCart } from '../hooks/useCart'
 import { ProductList } from './ProductList'
 import { NotFoundProduct } from './NotFoundProduct'
 export const Products = ({ products }) => {
-  const { addToCart, cart, removeFromCart } = useCart()
-  const { favorites, removeFromFavorites, addToFavorites } = useFavorites()
+  const { favorites } = useFavorites()
+  const { cart } = useCart()
   return (
-    <section className='w-full max-w-5xl'>
+    <section className='w-full max-w-6xl'>
       <ul className='grid grid-cols-1 gap-3'>
         {
           products.length
@@ -20,10 +20,6 @@ export const Products = ({ products }) => {
                   product={product}
                   itemInCart={itemInCart}
                   itemInFav={itemInFav}
-                  addToCart={addToCart}
-                  addToFavorites={addToFavorites}
-                  removeFromCart={removeFromCart}
-                  removeFromFavorites={removeFromFavorites}
                 />
               )
             }
