@@ -79,9 +79,9 @@ This project was create with next framworks/libreries
 
 * [![React][React.js]][React-url]
 * [![React Router][React-Router]][React-Router-url]
-* [![React hook form][React-hook-form]][Reacthooksform-url]
-* [![SASS][SASS.com]][SASS-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![TailwindCSS][TailwindCSS.com]][Tailwindcss-url]
+* [![Vite][Vite.dev]][Vite-url]
+* [![Netlify Status](https://api.netlify.com/api/v1/badges/3b9a0f5f-9562-41b3-b9df-9efd03a729b2/deploy-status)](https://app.netlify.com/sites/gilded-lebkuchen-26c8b9/deploys)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,7 +95,7 @@ This project was create with next framworks/libreries
 Before we start, we need to install:
 * npm
   ```sh
-  npm install npm@latest -g
+  npm create vite@latest nameproyect
   ```
 
 ### Installation
@@ -105,15 +105,16 @@ _After installing npm._
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/tomasquinteros/cardealership-tomas2.0.git
+   git clone https://github.com/tomasquinteros/E.COMMERCE.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. Copy the example env file to enter your api key `.env` file
+3. Install TailwindCSS
    ```bash
-   cp .env.example .env
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -151,11 +152,11 @@ The breakpoints used to create the responsive design:
   * ### What's more...
 
 
-  The website was created with custom data from a json as well as data from a car API in which we pass the model of the car and it looks for its details.
+  The website was created with custom data from a json where is an array of objects with products.
 
   <img align="center" src="public/images/readme-images/code-APIcall.png" alt="screen-codeAPIcall">
 
-  Also, a 404 page was created and is used when the path description is modified with a model that does not exist.
+  Also, a 404 page was created and is used when the path product is modified with a product that does not exist.
 
   <img align="center" src="public/images/readme-images/404-Mobile.png" alt="error404">
 
@@ -166,7 +167,7 @@ The breakpoints used to create the responsive design:
 
 Tomás Said Quinteros - [@said_quinteros](https://twitter.com/said_quinteros) - tomassaidquinteros@gmail.com
 
-Project Link: [CAR DEALERSHIP](https://github.com/tomasquinteros/cardealership-tomas2.0)
+Project Link: [E-COMMERCE](https://github.com/tomasquinteros/E-COMMERCE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,9 +180,7 @@ Some links of things that I have used in the project and I would like to thank.
 
 
 * [Img Shields](https://shields.io)
-* [React Icons](https://react-icons.github.io/react-icons/)
-* [API Ninjas](https://api-ninjas.com/api/cars)
-* [React Slick - Carousel](https://react-slick.neostack.com/)
+* [Tabler Icons](https://tabler-icons.io/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -198,13 +197,11 @@ Some links of things that I have used in the project and I would like to thank.
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[React-hook-form]: https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white
-[Reacthooksform-url]: https://react-hook-form.com/
+[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwindcss-url]: https://tailwindcss.com/
 [React-Router]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
 [React-Router-url]: https://reactrouter.com/en/main
 
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
 
-[SASS.com]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
-[SASS-url]: https://sass-lang.com/
+[Vite.com]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
