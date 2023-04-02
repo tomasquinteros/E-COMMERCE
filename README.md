@@ -11,22 +11,22 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://cardealership-tomasquinteros.netlify.app/">
+  <a href="https://ecommerce-tomasquinterosdev.netlify.app/">
     <img src="public/images/readme-images/logo.png" alt="Logo" width="400">
   </a>
 
-  <h3 align="center">CAR DEALERSHIP APP</h3>
+  <h3 align="center">E-COMMERCE</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/tomasquinteros/cardealership-tomas2.0"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tomasquinteros/E-COMMERCE"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://cardealership-tomasquinteros.netlify.app/">View Demo</a>
+    <a href="https://ecommerce-tomasquinterosdev.netlify.app/">View Demo</a>
     ·
-    <a href="https://github.com/tomasquinteros/cardealership-tomas2.0/issues">Report Bug</a>
+    <a href="https://github.com/tomasquinteros/E-COMMERCE/issues">Report Bug</a>
     ·
-    <a href="https://github.com/tomasquinteros/cardealership-tomas2.0/issues">Request Feature</a>
+    <a href="https://github.com/tomasquinteros/E-COMMERCE/issues">Request Feature</a>
   </p>
 </div>
 
@@ -79,8 +79,8 @@ This project was create with next framworks/libreries
 
 * [![React][React.js]][React-url]
 * [![React Router][React-Router]][React-Router-url]
-* [![TailwindCSS][TailwindCSS.com]][Tailwindcss-url]
-* [![Vite][Vite.dev]][Vite-url]
+* [![TailwindCSS][TailwindCSS]][Tailwindcss-url]
+* [![Vite][Vite]][Vite-url]
 * [![Netlify Status](https://api.netlify.com/api/v1/badges/3b9a0f5f-9562-41b3-b9df-9efd03a729b2/deploy-status)](https://app.netlify.com/sites/gilded-lebkuchen-26c8b9/deploys)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,7 +130,7 @@ The breakpoints used to create the responsive design:
 
   * [Breakpoints - Bootstrap](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
 
-  * ### Screenshots 
+<!--   * ### Screenshots 
   <div align="center">
   <h3>Mobile</h3> 
 
@@ -148,7 +148,7 @@ The breakpoints used to create the responsive design:
 
   <img src="public/images/readme-images/Desktop.png" alt="screen-desktop">
   </div>
-  
+   -->
   * ### What's more...
 
 
@@ -186,10 +186,10 @@ Some links of things that I have used in the project and I would like to thank.
 
 
 <!-- LINKS & IMAGES -->
-[stars-shield]: https://img.shields.io/github/stars/tomasquinteros/cardealership-tomas2.0.svg?style=for-the-badge
-[stars-url]: https://github.com/tomasquinteros/cardealership-tomas2.0/stargazers
-[issues-shield]: https://img.shields.io/github/issues/tomasquinteros/cardealership-tomas2.0.svg?style=for-the-badge
-[issues-url]: https://github.com/tomasquinteros/cardealership-tomas2.0/issues
+[stars-shield]: https://img.shields.io/github/stars/tomasquinteros/E-COMMERCE.svg?style=for-the-badge
+[stars-url]: https://github.com/tomasquinteros/E-COMMERCE/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tomasquinteros/E-COMMERCE.svg?style=for-the-badge
+[issues-url]: https://github.com/tomasquinteros/E-COMMERCE/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tom%C3%A1s-quinteros-495a81252/
 [product-screenshot]: public/images/readme-images/screenshot-page.png
