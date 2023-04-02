@@ -9,7 +9,7 @@ export const Home = () => {
   const { filterProduct, filters, setFilters } = useFilters()
   const filteredProduct = filterProduct(products)
   return (
-    <div className='flex flex-col items-center justify-center w-full gap-10 max-w-7xl'>
+    <div className='flex flex-col items-center justify-center w-full gap-10 max-w-7xl mt-32'>
       <Filters setFilters={setFilters} filters={filters} />
       <Products products={filteredProduct} />
     </div>
