@@ -4,7 +4,7 @@ import { CartList } from './CartList'
 export function Cart () {
   const { cart, addToCart, removeFromCart, clearCart, decrementCart, totalPrice } = useCart()
   return (
-    <aside>
+    <aside className='mt-32'>
       <ul className='flex flex-col gap-2'>
         <CartList products={cart} addToCart={addToCart} removeFromCart={removeFromCart} decrementCart={decrementCart} />
       </ul>

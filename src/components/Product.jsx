@@ -13,7 +13,7 @@ export const Product = () => {
     }
   }, [])
   return (
-    <div>
+    <div className='mt-32'>
       {
        product ? <ProductDetail product={product} /> : <NotFoundProduct />
       }

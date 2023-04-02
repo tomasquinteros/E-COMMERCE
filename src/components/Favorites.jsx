@@ -20,7 +20,7 @@ function ItemFavorites ({ favorites, removeFromFavorites }) {
 export const Favorites = () => {
   const { favorites, removeFromFavorites, clearFavorites } = useFavorites()
   return (
-    <div className='w-full max-w-6xl'>
+    <div className='w-full max-w-6xl mt-32'>
       <ul className='grid grid-cols-3 gap-3'>
         <ItemFavorites favorites={favorites} removeFromFavorites={removeFromFavorites} />
       </ul>
