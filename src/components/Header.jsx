@@ -1,8 +1,17 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { CartIcon, AddFavoritesIcon } from './Icons'
 export const Header = () => {
+  const [navBar, setNavBar] = useState()
+  function NavBar () {
+    if (window.screenY >= 100) {
+      setNavBar(true)
+    }
+    setNavBar(false)
+  }
+  window.addEventListener('scroll', NavBar)
   return (
-    <header className='bg-slate-900 w-full'>
+    <header className={navBar ? 'bg-slate-900 w-full blur-md' : 'fixed top-0 left-0 bg-slate-900 w-full'}>
       <nav className='max-w-7xl flex justify-between p-4 items-center m-auto'>
         <NavLink className='text-6xl text-orange-500' to='/'> SHOPPING CART </NavLink>
         <section className='flex gap-20'>
