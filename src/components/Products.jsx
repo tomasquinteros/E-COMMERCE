@@ -11,7 +11,7 @@ export const Products = ({ products }) => {
       <ul className='grid grid-cols-1 gap-3'>
         {
           products.length
-            ? products.map(product => {
+            ? products.slice(0, 10).map(product => {
               const itemInCart = checkProductInCart(product, cart)
               const itemInFav = checkProductInFavorites(product, favorites)
               return (
