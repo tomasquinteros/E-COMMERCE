@@ -21,6 +21,7 @@ export const FavoritesProvider = ({ children }) => {
   const clearFavorites = () => {
     return setFavorites([])
   }
+  console.log(favorites)
   return (
     <FavoritesContext.Provider
       value={{ favorites, addToFavorites, removeFromFavorites, clearFavorites }}
