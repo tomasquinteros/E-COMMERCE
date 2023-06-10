@@ -13,7 +13,7 @@ export function ProductDetail ({ product }) {
   const [image, setImage] = useState(thumbnail)
   const [Qty, setCount] = useState(1)
   const itemInFav = checkProductInFavorites(product, favorites)
-
+  console.log(product)
   return (
     <section className='max-w-6xl'>
       <div className='flex gap-20 items-center justify-evenly'>
